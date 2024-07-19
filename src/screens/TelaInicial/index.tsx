@@ -5,18 +5,18 @@ import { ContainerView } from './style'
 import { useCustomTema } from '@/context/ThemeContext/TemaContext'
 import { router } from 'expo-router'
 
-export const url: string = "https://brandslogos.com/wp-content/uploads/images/large/barbershop-logo.png"
+export const url: string = "https://2.bp.blogspot.com/-ZTfYzFhoZF8/XBramAihOfI/AAAAAAAARCg/VCe6wYsrAHY9mLNuEPMLX_o7Cj6POyyPwCLcBGAs/s1600/Barbershop.png"
 export default function TelaInicial() {
     const { isDark, theme } = useCustomTema()
-    
-    useEffect(()=>{
+
+    useEffect(() => {
         buscarDadosDoApp()
     }, [])
-    
-    function buscarDadosDoApp(){
-            setTimeout(() => {
-                router.replace('(auth)')
-            }, 5000);
+
+    function buscarDadosDoApp() {
+        setTimeout(() => {
+            router.replace('public')
+        }, 5000);
     }
 
 
@@ -30,7 +30,7 @@ export default function TelaInicial() {
             />
             <ContainerView>
                 <Image source={{ uri: url }} width={220} height={220} />
-                <ActivityIndicator size={40} color={'white'}/>
+                <ActivityIndicator size={40} color={'white'} />
             </ContainerView>
         </ThemedView>
     )

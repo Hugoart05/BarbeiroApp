@@ -7,6 +7,7 @@ export default function InitialLayout() {
   return (
     <TemaProvider>
         <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name='public'/>
           <Stack.Screen name='index' />
           <Stack.Screen name='(tabs)' />
           <Stack.Screen name='(auth)' />
