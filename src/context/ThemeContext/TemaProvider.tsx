@@ -7,7 +7,7 @@ import { TemaProviderProps } from "./types"
 
 export function TemaProvider({children}:TemaProviderProps){
     const [theme,setTheme] = useState<TemaType>(Light)
-    const [ isDark, setIsDark] = useState<boolean>(false)
+    const [ isDark, setIsDark] = useState<boolean>(true)
 
     function toggleTema() {
         setIsDark(!isDark)

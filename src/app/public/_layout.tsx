@@ -4,9 +4,8 @@ import { Stack } from 'expo-router'
 
 export default function PublicLayout() {
   return (
-    <Stack screenOptions={{headerShown:false}}>
-        <Stack.Screen name='index'/>
-        <Stack.Screen name='welcome'/>
+    <Stack screenOptions={{headerShown:false, animation:'simple_push'}}>
+        <Stack.Screen name='index' options={{animation:'simple_push'}}/>
     </Stack>
   )
 }
