@@ -1,18 +1,24 @@
 import { View, Text, ImageBackground } from 'react-native'
 import React from 'react'
-import { Background, CategoriaIcone, CategoriaLabel, ContainerCategoriaIcone } from './style'
+import { CategoriaContainer, CategoriaIcone, CategoriaLabel } from './style'
 import { useCustomTema } from '@/context/ThemeContext/TemaContext'
+import { Categoria } from '@/viewModel/Categoria'
+import Ionicons from '@expo/vector-icons/Ionicons'
+import FontAwesome from "@expo/vector-icons/FontAwesome"
 
-export default function ActionsIcones() {
+interface props {
+  nome: string
+  icon: keyof typeof Ionicons.glyphMap
+}
+
+export default function ActionsIcones({ icon, nome }: props) {
   const { theme } = useCustomTema()
   return (
-    <CategoriaIcone>
-        <Background 
-          source={{uri:"https://th.bing.com/th/id/OIP.oKAVQPxy70SomcoK93e2gwHaE8?rs=1&pid=ImgDetMain"}}
-          borderRadius={30}
-          borderColor={theme.principal}
-        />
-        <CategoriaLabel>Nome Categoria</CategoriaLabel>
-    </CategoriaIcone>
+    <CategoriaContainer>
+      <CategoriaIcone>
+        <Ionicons name={icon} size={30} />
+      </CategoriaIcone>
+      <CategoriaLabel>{nome}</CategoriaLabel>
+    </CategoriaContainer>
   )
 }

@@ -1,23 +1,27 @@
 import styled from "styled-components/native";
 
-export const ContainerCategoriaIcone = styled.ScrollView`
+
+export const CategoriaIcons = styled.View`
+    width: 100%;
+    padding: 20px 0;
     flex-direction: row;
-    gap: 10px;
-`
-export const Background = styled.Image<{borderColor:string}>`
-    height: 100%;
-    width: 60px;
-    border-color: ${({borderColor})=>borderColor};
-    border-width: 3px;
+    justify-content: space-around;
 `
 
 export const CategoriaLabel = styled.Text`
     font-size: 9px;
-    color: white;
 `
 export const CategoriaIcone = styled.View`
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     overflow: hidden;
     margin: 10px;
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+`
+export const CategoriaContainer = styled.View`
+    justify-content: center;
+    align-items: center;
 `
