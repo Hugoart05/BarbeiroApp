@@ -4,11 +4,9 @@ import { StatusBar } from 'react-native'
 
 export default function AuthLayout() {
   return (
-    <>
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="index" />
+      <Stack screenOptions={{ headerShown: false, animation:'simple_push' }}>
+        <Stack.Screen name="signin" />
         <Stack.Screen name="signup" />
       </Stack>
-    </>
   )
 }

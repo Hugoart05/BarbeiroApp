@@ -5,8 +5,6 @@ import GlobalContainer from '@/components/GlobalContainer'
 
 export default function index() {
   return (
-    <GlobalContainer>
       <TelaInicial />
-    </GlobalContainer>
   )
 }

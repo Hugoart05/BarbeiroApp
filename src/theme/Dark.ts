@@ -1,10 +1,8 @@
 import { TemaType } from "./TemaType";
 
 export const Dark:TemaType ={
-    background: "#212121",
-    primary: "#FF4500",
-    secondary: "#FFA500",
-    text: "#FFFFFF",
-    principal: "#FF0000",
-    orange:"#FFB546"
+    background: "#1D1C23",
+    primaria: "white",
+    secundaria: "#39383A",
+    principal: "#4E40EE",
 }

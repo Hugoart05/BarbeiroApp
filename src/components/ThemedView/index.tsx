@@ -19,5 +19,6 @@ export default function ThemedView({children, background,...rest }: ContainerPro
 const Container = styled.View<{background:string}>`
     width: 100%;
     height: 100%;
+    padding: 20px;
     background-color:${({background})=>background};
 `
